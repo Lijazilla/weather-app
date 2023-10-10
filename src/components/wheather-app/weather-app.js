@@ -9,9 +9,9 @@ import wind_icon from '../assets/wind.png';
 
 import React from 'react';
 import { useState } from 'react';
-import './wheather-app.css';
+import './weather-app.css';
 
-const WheatherApp = () => {
+const WeatherApp = () => {
 
     let api_key = "44e0e740228ff0500e77a0bb3bad3f12";
 
@@ -33,9 +33,9 @@ const WheatherApp = () => {
 
         if (data && data.main && data.main.humidity) {
             humidity[0].innerHTML = data.main.humidity + " %";
-          } else {
+            } else {
             humidity[0].style.display = "none";
-          } 
+            } 
         
         if (data && data.main && data.wind.speed) {
         wind[0].innerHTML = Math.floor(data.wind.speed) + " km/h";
@@ -45,9 +45,9 @@ const WheatherApp = () => {
         
         if (data && data.main && data.main.temp) {
             temprature[0].innerHTML = Math.floor(data.main.temp) + " °c";
-          } else {
+            } else {
             temprature[0].style.display = "none";
-          }
+            }
 
         if (data && data.name) {
         location[0].innerHTML = data.name;
@@ -108,4 +108,4 @@ const WheatherApp = () => {
     )
 }
 
-export default WheatherApp;
+export default WeatherApp;
